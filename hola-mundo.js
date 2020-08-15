@@ -27,7 +27,6 @@ function crearIntegrantes(integrantes){
         
         const $input = document.createElement("input");
         $input.className = "integrante"
-        $input.className = "edad-integrante"
 
         document.querySelector("form").appendChild($label);
         document.querySelector("form").appendChild($input)
@@ -64,20 +63,23 @@ function ocultarBotonReiniciar(){
 const $botonCalcular = document.querySelector("#boton-calcular");
 
 $botonCalcular.onclick = function(){
-    const integrantes = document.querySelectorAll(".edad-integrante");
+    const integrantes = document.querySelectorAll("input.integrante");
     const edades = [];
     
     for (let i = 0; i < integrantes.length; i++){
         edades.push(Number(integrantes[i].value))
     }
 
+    mostrarResultados();
     mostrarEdadMayor(edades);
     mostrarEdadMenor(edades);
     mostrarPromedioEdad(edades);
 
     return false;
 }
-
+function mostrarResultados(){
+    document.querySelector("#resultados").className = "";
+}
 function mostrarEdadMayor(edades){
     document.querySelector(".mayor-edad").textContent = "la mayor edad es " + Math.max(...edades);
 }
@@ -96,3 +98,16 @@ function mostrarPromedioEdad(edades){
 
     document.querySelector(".promedio-edad").textContent = "el promedio de edad es " + calcularPromedio(suma, edades);
 }
+
+
+const $botonReiniciar = document.querySelector("#boton-reiniciar");
+
+$botonReiniciar.onclick = function(){
+
+    document.querySelector("#resultados").className = "oculto";
+
+    mostrarBotones(integrantes);
+    borrarIntegrantesAnteriores();
+}
+
+
