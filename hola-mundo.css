@@ -1,11 +1,12 @@
+.oculto {
+    display: none;
+}
 h1 {
     color: red;
 }
-
-body {
-background-color: aquamarine;
+input {
+    display: block;
 }
-
-.h1 {
-    color: red;
+label {
+    display: block;
 }
