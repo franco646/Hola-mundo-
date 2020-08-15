@@ -6,12 +6,21 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' href='hola-mundo.css'>
-    <script src='hola-mundo.js'></script>
 </head>
 <body>
-    <h1 id="hola">Bienvenido!</h1>
+    <h1 id="saludo">Bienvenido!</h1>
     <form>
-        <input type="text" id="preguntar-nomber" name="nombre">
+        <label>ingrese numero de integrantes</label>
+            <input type="text" id="integrantes"/><button type="submit" id="boton-siguiente">siguiente</button>
+            <button id="boton-calcular" class="oculto">calcular</button>
+            <button id="boton-reiniciar" class="oculto" type="reset">reiniciar</button>
+        </label>    
     </form>
+    <div class="mayor-edad"></div>
+    <div class="menor-edad"></div>
+    <div class="promedio-edad"></div>
+
 </body>
+<script src='hola-mundo.js'></script>
+
 </html>
