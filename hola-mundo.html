@@ -5,22 +5,54 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel='stylesheet' type='text/css' href='hola-mundo.css'>
 </head>
 <body>
-    <h1 id="saludo">Bienvenido!</h1>
-    <form>
-        <label>ingrese numero de integrantes</label>
-            <input type="text" id="integrantes"/><button type="submit" id="boton-siguiente">siguiente</button>
-            <button id="boton-calcular" class="oculto">calcular</button>
-            <button id="boton-reiniciar" class="oculto" type="reset">reiniciar</button>
-        </label>    
-    </form>
-    <div id="resultados" class="oculto">
-    <li class="mayor-edad"></li>
-    <li class="menor-edad"></li>
-    <li class="promedio-edad"></li>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+          </div>
+          <div class="col-sm">
+            <div class="alert alert-primary" role="alert">
+                <div id="saludo">Bienvenido!</div>
+            </div>
+          </div>
+          <div class="col-sm">
+          </div>
+        </div>
     </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+          </div>
+          <div class="col-sm">
+            <div class="card" style="width: 22rem;">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput">Cantidad de integrantes en su familia:</label>
+                          <input type="text" class="form-control" id="integrantes" placeholder="Ingrese un numero">
+                          <button type="submit" id="boton-siguiente" class="btn btn-primary">siguiente</button>
+                          <button type="button" class="btn btn-secondary oculto" id="boton-calcular">Calcular</button>
+                          <button type="reset" class="btn btn-danger oculto" id="boton-reiniciar">Reiniciar</button>
+                        </div>    
+                    </form>
+                    <div class="oculto" id="resultados" style="width: 18rem;">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item mayor-edad"></li>
+                          <li class="list-group-item menor-edad"></li>
+                          <li class="list-group-item promedio-edad"></li>
+                        </ul>
+                        <button type="reset" class="btn btn-danger" id="boton-reiniciar-dos">Reiniciar</button>
+                      </div>   
+                </div>
+              </div>
+          </div>
+          <div class="col-sm">
+          </div>
+        </div>
+      </div>
 </body>
 <script src='hola-mundo.js'></script>
 

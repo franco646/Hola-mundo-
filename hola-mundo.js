@@ -26,7 +26,8 @@ function crearIntegrantes(integrantes){
         $label.className = "integrante"
         
         const $input = document.createElement("input");
-        $input.className = "integrante"
+        $input.className = "form-control integrante"
+        $input.placeholder = "Edad"
 
         document.querySelector("form").appendChild($label);
         document.querySelector("form").appendChild($input)
@@ -48,10 +49,10 @@ function mostrarBotones(integrantes){
 }
 
 function mostrarBotonCalcular(){
-    document.querySelector("#boton-calcular").className = "";
+    document.querySelector("#boton-calcular").className = "btn btn-secondary";
 }
 function mostrarBotonReiniciar(){
-    document.querySelector("#boton-reiniciar").className = "";
+    document.querySelector("#boton-reiniciar").className = "btn btn-danger";
 }
 function ocultarBotonCalcular(){
     document.querySelector("#boton-calcular").className = "oculto";
@@ -70,6 +71,7 @@ $botonCalcular.onclick = function(){
         edades.push(Number(integrantes[i].value))
     }
 
+    ocultarFormulario();
     mostrarResultados();
     mostrarEdadMayor(edades);
     mostrarEdadMenor(edades);
@@ -101,7 +103,6 @@ function mostrarPromedioEdad(edades){
 
 
 const $botonReiniciar = document.querySelector("#boton-reiniciar");
-
 $botonReiniciar.onclick = function(){
 
     document.querySelector("#resultados").className = "oculto";
@@ -110,4 +111,19 @@ $botonReiniciar.onclick = function(){
     borrarIntegrantesAnteriores();
 }
 
+const $botonReiniciarDos = document.querySelector("#boton-reiniciar-dos");
+$botonReiniciarDos.onclick = function (){
+    document.querySelector("#resultados").className = "oculto";
 
+    mostrarFormulario();
+    mostrarBotones(integrantes);
+    borrarIntegrantesAnteriores();
+}
+
+function mostrarFormulario(){
+    document.querySelector("form").className = "";
+}
+
+function ocultarFormulario(){
+    document.querySelector("form").className = "oculto";
+}
