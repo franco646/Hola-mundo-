@@ -1,0 +1,23 @@
+{
+  "name": "hola-mundo-",
+  "version": "1.0.0",
+  "description": "formulario que pregunta edades y calcula edad mayor, menor y promedio",
+  "main": "hola-mundo.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franco646/Hola-mundo-.git"
+  },
+  "author": "franco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franco646/Hola-mundo-/issues"
+  },
+  "homepage": "https://github.com/franco646/Hola-mundo-#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1"
+  }
+}
